@@ -19,15 +19,9 @@
       </section>
     </header>
     <main>
-      <section id="about">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-          reprehenderit delectus quo a placeat nulla itaque repudiandae impedit,
-          et sapiente eos. Totam maiores esse dicta fugiat laudantium voluptate
-          earum nihil.
-        </p>
-      </section>
+      <section id="about"></section>
       <section id="sleeves">
+        <!-- I am going to have a display that will show my favorite card gaming sleeves in this section. There will be an image of the product and a button on either side to shuffle through the products. I will eventually include an API endpoint to fetch the data from Amazon -->
         <h2>Dragon Shield Sleeves</h2>
         <div class="product-items">
           <button>Left Arrow</button>
@@ -41,14 +35,9 @@
           </div>
           <button>Right Arrow</button>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-          similique quas omnis esse nulla sequi maiores laudantium ab. Illum
-          cumque deleniti iure recusandae accusamus mollitia possimus porro
-          quasi, ullam dignissimos.
-        </p>
       </section>
       <section id="game">
+        <!-- I am going to make my game be a "bigger number wins game". The user will click a button, two cards will be flipped and the higher number on the card will win the game. Stay tuned. -->
         <h2>Rock, Paper, Scissors MTG Card Game</h2>
         <p>
           This game will see two cards flipped up simultaneously. A winner will
@@ -70,7 +59,54 @@
       </section>
       <section id="contact-form">
         <div id="terminal-window">
-            <form action="" method="get" class="terminal-form"></form>
+          <!-- My goal for the form will be to make it look like a computer terminal because I like that aesthetic -->
+          <form action="" method="get" class="terminal-form">
+            <fieldset>
+              <legend>Please fill out this form!</legend>
+              <!--I understand this may be off putting but I like having the legend around my forms. This will get adjusted once I begin styling the form.-->
+              <br />
+              <label for="">
+                Name:
+                <input type="text" />
+              </label>
+              <br />
+              <label for="">
+                Phone Number:
+                <input type="tel" />
+              </label>
+              <br />
+              <label for="">
+                Email:
+                <input type="email" />
+              </label>
+              <br />
+              <label for="">
+                Please leave me a comment:
+                <input type="text" />
+              </label>
+              <br />
+              <fieldset>
+                <legend>Contact Preference</legend>
+                <label for="">
+                  Phone
+                  <input type="radio" value="Phone" />
+                </label>
+                <label for="">
+                  Email
+                  <input type="radio" value="Email" />
+                </label>
+              </fieldset>
+              <label for="">
+                Submit
+                <input type="submit" />
+              </label>
+              <!-- I researched more about innerhtml and I want to display the success or error message of the form in real time when a user submits their information -->
+              <div class="error-message"></div>
+              <div class="success-message"></div>
+            </fieldset>
+            <br />
+            <!-- these breaks are temporary and just in place to organize my form until I begin styling this section-->
+          </form>
         </div>
       </section>
     </main>
@@ -82,8 +118,12 @@
         |
         <a href="#">LinkedIn</a>
         |
-        <a href="#">Email</a>
+        <a href="mailto:cventura64@outlook.com?subject=Website Inquiry">
+          Email Me
+        </a>
         |
+        <!-- the qr code will link to either this repository, a way for someone to buy me coffee or my github -->
+        <div class="qr-code"></div>
       </section>
     </footer>
   </body>

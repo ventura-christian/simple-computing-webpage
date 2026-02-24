@@ -34,6 +34,18 @@
     color: black;
 }
 
+.error-message {
+    color: black;
+}
+
+.success-message {
+    color: black;
+}
+
 #contacts {
   color: black;
+}
+
+.qr-code {
+    color: black;
 }
