@@ -2,6 +2,18 @@
   color: black;
 }
 
+#site-identity {
+  color: black;
+}
+
+#nav {
+  color: black;
+}
+
+#theme-toggle {
+  color: black;
+}
+
 #hero {
   color: black;
 }
@@ -14,32 +26,96 @@
   color: black;
 }
 
+.sleeves-carousel {
+  color: black;
+}
+
+#prev-sleeve {
+  color: black;
+}
+
+.product-card {
+  color: black;
+}
+
+#sleeves-image {
+  color: black;
+}
+
+#sleeves-name {
+  color: black;
+}
+
+#sleeves-description {
+  color: black;
+}
+
+#next-sleeve {
+  color: black;
+}
+
 #game {
   color: black;
 }
 
-.card-flip {
+#card-flip {
+  color: black;
+}
+
+#flip-card-button {
+  color: black;
+}
+
+#game-result {
   color: black;
 }
 
 #contact-form {
-    color: black;
+  color: black;
 }
 
 #terminal-window {
-    color: black;
+  color: black;
 }
 
 .terminal-form {
-    color: black;
+  color: black;
+}
+
+#full-name {
+  color: black;
+}
+
+#phone-number {
+  color: black;
+}
+
+#email {
+  color: black;
+}
+
+#comments {
+  color: black;
+}
+
+#phone-contact {
+  color: black;
+}
+
+#email-contact {
+  color: black;
+}
+
+#submit-button {
+  color: black;
 }
 
 .error-message {
-    color: black;
+  color: black;
 }
 
 .success-message {
-    color: black;
+  color: black;
 }
 
 #contacts {
@@ -47,5 +123,5 @@
 }
 
 .qr-code {
-    color: black;
+  color: black;
 }

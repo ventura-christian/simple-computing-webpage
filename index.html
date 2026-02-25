@@ -8,53 +8,79 @@
       name="description"
       content="Purpose: For use in GIT417 as the final project. Tech used: HTML, CSS, JS."
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
     <title>Simple Computing x christian_ventura</title>
   </head>
   <body>
     <header>
-      <section id="hero">
+      <div id="site-identity">
         <h1>Ermac</h1>
-      </section>
+      </div>
+      <div id="nav">
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sleeves">Card Sleeves</a></li>
+            <li><a href="#game">Flip Game</a></li>
+            <li><a href="#contact-form">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <button id="theme-toggle">Toggle Theme</button>
     </header>
     <main>
+      <section id="hero"></section>
       <section id="about"></section>
       <section id="sleeves">
         <!-- I am going to have a display that will show my favorite card gaming sleeves in this section. There will be an image of the product and a button on either side to shuffle through the products. I will eventually include an API endpoint to fetch the data from Amazon -->
         <h2>Dragon Shield Sleeves</h2>
-        <div class="product-items">
-          <button>Left Arrow</button>
-          <div class="product-display">
+
+        <div class="sleeves-carousel">
+          <button id="prev-sleeve" type="button" aria-label="Previous Sleeve">
+            ◀
+          </button>
+          <div class="product-card">
             <img
-              src="#"
-              alt="This will hold the image of the card sleeves for the product being displayed"
+              id="sleeves-image"
+              src="assets/images/dragonshield-sleeves.jpeg"
+              alt="Dragon shield card sleeves"
             />
-            <h3>Dragon Shield Product</h3>
-            <p>Product Description</p>
+            <h3 id="sleeves-name">
+              <!-- ADD THIS -->
+              <!-- Sleeve name will be inserted dynamically -->
+            </h3>
+            <p id="sleeves-description">
+              <!-- ADD THIS -->
+              <!-- Product description will be inserted dynamically -->
+            </p>
           </div>
-          <button>Right Arrow</button>
+          <button id="next-sleeve" type="button" aria-label="Next Sleeve">
+            ▶
+          </button>
         </div>
       </section>
       <section id="game">
         <!-- I am going to make my game be a "bigger number wins game". The user will click a button, two cards will be flipped and the higher number on the card will win the game. Stay tuned. -->
-        <h2>Rock, Paper, Scissors MTG Card Game</h2>
+        <h2>Magic: the Gathering Mana Value Game</h2>
         <p>
-          This game will see two cards flipped up simultaneously. A winner will
-          be decided based on the mana cost of the Magic: the Gathering cards
-          flipped over.
+          Higher Mana Value Wins!
+          <button id="flip-card-button" type="button">Flip Cards</button>
         </p>
-        <button>Flip Cards</button>
-        <div class="card-flip">
+        <div id="card-flip">
           <img
-            src="#"
-            alt="First Magic: the Gathering card for player one that has art and a mana cost"
+            src="assets/images/necrodominance.jpg"
+            alt="The magic card chosen for player one. This card is random and changes each time the user presses the flip card button."
           />
           <img
-            src="#"
-            alt="Second Magic: the Gathering card for player two that has art and a mana cost"
+            src="assets/images/thought-devourer.jpg"
+            alt="The magic card chosen for player two. This card is random and changes each time the user presses the flip card button."
           />
-          <h3>Results Message!</h3>
+          <!-- <button id="flip-card-button">Flip Cards</button> -->
+          <div id="game-result">
+            <!-- ADD THIS -->
+            <!-- This will dynamically display the results of the mana cost game -->
+          </div>
         </div>
       </section>
       <section id="contact-form">
@@ -65,40 +91,62 @@
               <legend>Please fill out this form!</legend>
               <!--I understand this may be off putting but I like having the legend around my forms. This will get adjusted once I begin styling the form.-->
               <br />
-              <label for="">
+              <label for="full-name">
                 Name:
-                <input type="text" />
+                <input id="full-name" name="fullName" type="text" required />
               </label>
               <br />
-              <label for="">
+              <label for="phone-number">
                 Phone Number:
-                <input type="tel" />
+                <input
+                  id="phone-number"
+                  name="phoneNumber"
+                  type="tel"
+                  required
+                />
               </label>
               <br />
-              <label for="">
+              <label for="email">
                 Email:
-                <input type="email" />
+                <input id="email" name="email" type="email" required />
               </label>
               <br />
-              <label for="">
-                Please leave me a comment:
-                <input type="text" />
+              Please leave me a comment:
+              <br />
+              <label for="comments">
+                <textarea
+                  id="comments"
+                  name="comments"
+                  rows="10"
+                  cols="40"
+                  placeholder="your opinion matters..."
+                ></textarea>
               </label>
               <br />
               <fieldset>
                 <legend>Contact Preference</legend>
-                <label for="">
+                <label for="phone-contact">
                   Phone
-                  <input type="radio" value="Phone" />
+                  <input
+                    id="phone-contact"
+                    name="contactPreference"
+                    type="radio"
+                    value="Phone"
+                    checked
+                  />
                 </label>
-                <label for="">
+                <label for="email-contact">
                   Email
-                  <input type="radio" value="Email" />
+                  <input
+                    id="email-contact"
+                    name="contactPreference"
+                    type="radio"
+                    value="Email"
+                  />
                 </label>
               </fieldset>
-              <label for="">
-                Submit
-                <input type="submit" />
+              <label for="submit-button">
+                <input id="submit-button" type="submit" />
               </label>
               <!-- I researched more about innerhtml and I want to display the success or error message of the form in real time when a user submits their information -->
               <div class="error-message"></div>
