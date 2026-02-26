@@ -1,5 +1,21 @@
-/* ==== Global Reset ==== */
+:root {
+  --color-primary: #000080;
+  --color-accent: #cc0000;
+  --color-highlight: #ffcc00;
+  --color-text-main: #000000;
+  --color-text-muted: #555555;
+  --color-text-inverse: #ffffff;
+  --color-box-shadow: #7a7a7a;
+  --color-bg-main: #c0c0c0;
+  --color-bg-section: #d8d8d8;
+  --color-bg-card: #e6e6e6;
+  --color-border: #000000;
+  --color-bg-gradient-bottom: #2f5d9a;
+  --color-bg-gradient-right: #6d9ed6;
+  --color-hover: #000080;
+}
 
+/* ==== Global Reset ==== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,27 +24,46 @@
 
 body {
   font-family: "Geneva", "Charcoal", "Monaco", "Chicago", sans-serif;
-  background: linear-gradient(to bottom right, #3a6ea5, #6fa3d2);
-  color: #000;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-bg-gradient-bottom),
+    var(--color-bg-gradient-right)
+  );
+  color: var(--color-text-main);
   min-height: 100vh;
 }
 
 section {
-  background-color: #d6d6d6;
-  border: 2px solid #000;
+  background-color: var(--color-bg-main);
+  border: 2px solid var(--color-text-main);
   margin: 40px auto;
   width: 85%;
   max-width: 1100px;
   box-shadow:
-    inset -2px -2px 0 #ffffff,
-    inset 2px 2px 0 #7a7a7a;
-  padding: 20px;
+    inset -2px -2px 0 var(--color-text-inverse),
+    inset 2px 2px 0 var(--color-box-shadow);
+  padding: 0;
+}
+
+section h2 {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 6px 12px;
+  font-size: 14px;
+  border-bottom: 2px solid var(--color-text-main);
+  letter-spacing: 0.5px;
+}
+
+section > *:not(h2) {
+  padding: 16px 20px;
 }
 
 header {
-  background-color: #c0c0c0;
-  border-bottom: 2px solid #000;
-  padding: 10px 20px;
+  background-color: var(--color-bg-section);
+  border-bottom: 2px solid var(--color-text-main);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 nav ul {
@@ -39,39 +74,48 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: var(--color-text-main);
   font-weight: bold;
+  padding: 4px 8px;
+  border: 2px solid transparent;
 }
 
 nav a:hover {
-  background-color: #000080;
-  color: #ffffff;
+  background-color: var(--color-hover);
+  color: var(--color-text-inverse);
   padding: 2px 6px;
+  cursor: pointer;
+  border: 2px solid var(--color-border);
+  box-shadow:
+    inset -2px -2px 0 var(--color-text-inverse),
+    inset 2px 2px 0 var(--color-box-shadow);
 }
 
-footer ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+button {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 6px 14px;
+  cursor: pointer;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  border: 2px solid var(--color-border);
+  box-shadow:
+    inset -2px -2px 0 var(--color-text-inverse),
+    inset 2px 2px 0 var(--color-box-shadow);
 }
 
-footer a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
+button:active {
+  box-shadow:
+    inset 2px 2px 0 var(--color-text-inverse),
+    inset -2px -2px 0 var(--color-box-shadow);
+  transform: translateY(2px);
 }
 
-footer a:hover {
-  background-color: #000080;
-  color: #ffffff;
-  padding: 2px 6px;
+button:hover {
+  background-color: var(--color-bg-card);
 }
 
 #site-identity {
-  color: black;
-}
-
-#nav {
   color: black;
 }
 
@@ -92,15 +136,58 @@ footer a:hover {
 }
 
 .sleeves-carousel {
-  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
-#prev-sleeve {
-  color: black;
+#prev-sleeve,
+#next-sleeve {
+  font-size: 18px;
+  font-weight: bold;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#prev-sleeve:hover,
+#next-sleeve:hover {
+  background-color: var(--color-bg-card);
+}
+
+.sleeve-image {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border: 2px solid var(--color-text-inverse);
+  box-shadow:
+    inset -2px -2px 0 var(--color-text-inverse),
+    inset 2px 2px 0 var(--color-box-shadow);
 }
 
 .product-card {
-  color: black;
+  background: var(--color-bg-card);
+  border: 2px solid var(--color-text-main);
+  box-shadow:
+    inset -2px -2px 0 var(--color-text-inverse),
+    inset 2px 2px 0 var(--color-box-shadow);
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.product-card h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-text-muted);
 }
 
 #sleeve-image {
@@ -115,33 +202,131 @@ footer a:hover {
   color: black;
 }
 
-#next-sleeve {
-  color: black;
-}
-
 #game {
   color: black;
 }
 
 #card-flip {
-  color: black;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  perspective: 1000px;
 }
 
-#flip-card-button {
-  color: black;
+#card-flip img {
+  width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px var(--color-text-muted);
+  transition: transform 0.5s;
 }
 
-#game-result {
-  color: black;
+#contacts {
+  height: max-content;
 }
 
-#contact-form {
-  color: black;
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 20px 0;
 }
 
-#terminal-window {
-  color: black;
+.footer-icons a,
+h3,
+h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text-main);
 }
+
+.macos9-icon {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 6px 14px;
+  cursor: pointer;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  border: 2px solid var(--color-border);
+  box-shadow:
+    inset -2px -2px 0 var(--color-text-inverse),
+    inset 2px 2px 0 var(--color-box-shadow);
+}
+
+.macos9-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.macos9-icon:hover {
+  background-color: var(--color-bg-card);
+}
+
+.macos9-icon:active {
+  box-shadow:
+    inset 2px 2px 0 var(--color-text-inverse),
+    inset -2px -2px 0 var(--color-box-shadow);
+  transform: translateY(2px);
+}
+
+/* #game-result {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: inherit;
+  background: var(--color-text-main);
+  border: 1px solid var(--color-text-muted);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+} */
+
+/* #contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: var(--color-text-main);
+  color: var(--color-bg-card);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px var(--color-text-muted);
+  font-family: inherit;
+} */
+
+/* #terminal-window {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: var(--color-text-main);
+  color: var(--color-bg-card);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px var(--color-text-muted);
+  font-family: inherit;
+} */
+
+/* .success-message,
+.error-message {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.success-message {
+  background-color: var(--color-text-muted);
+  color: var(--color-bg-card);
+}
+
+.error-message {
+  background-color: var(--color-text-muted);
+  color: var(--color-accent);
+} */
 
 .terminal-form {
   color: black;
@@ -172,14 +357,6 @@ footer a:hover {
 }
 
 #submit-button {
-  color: black;
-}
-
-.error-message {
-  color: black;
-}
-
-.success-message {
   color: black;
 }
 
