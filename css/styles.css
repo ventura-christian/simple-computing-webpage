@@ -13,6 +13,8 @@
   --color-bg-gradient-bottom: #2f5d9a;
   --color-bg-gradient-right: #6d9ed6;
   --color-hover: #000080;
+  --color-terminal-green: #33ff33;
+  --color-terminal-blue: #2cd8ff;
 }
 
 /* ==== Global Reset ==== */
@@ -115,26 +117,6 @@ button:hover {
   background-color: var(--color-bg-card);
 }
 
-#site-identity {
-  color: black;
-}
-
-#theme-toggle {
-  color: black;
-}
-
-#hero {
-  color: black;
-}
-
-#about {
-  color: black;
-}
-
-#sleeves {
-  color: black;
-}
-
 .sleeves-carousel {
   display: flex;
   align-items: center;
@@ -190,22 +172,6 @@ button:hover {
   color: var(--color-text-muted);
 }
 
-#sleeve-image {
-  color: black;
-}
-
-#sleeve-name {
-  color: black;
-}
-
-#sleeve-description {
-  color: black;
-}
-
-#game {
-  color: black;
-}
-
 #card-flip {
   display: flex;
   justify-content: center;
@@ -233,8 +199,8 @@ button:hover {
 }
 
 .footer-icons a,
-h3,
-h4 {
+.footer-icons h3,
+.footer-icons h4 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,6 +210,9 @@ h4 {
 }
 
 .macos9-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: inherit;
   font-size: 14px;
   padding: 6px 14px;
@@ -254,12 +223,14 @@ h4 {
   box-shadow:
     inset -2px -2px 0 var(--color-text-inverse),
     inset 2px 2px 0 var(--color-box-shadow);
+  text-decoration: none;
 }
 
 .macos9-icon svg {
-  width: 30px;
-  height: 30px;
-  fill: var(--color-border);
+  width: 20px;
+  height: 20px;
+  fill: var(--color-text-main);
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,27 +257,126 @@ h4 {
   border-radius: 6px;
 } */
 
-/* #contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 1rem;
+#terminal-window {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 0;
+  border: 2px solid var(--color-box-shadow);
   background: var(--color-text-main);
-  color: var(--color-bg-card);
-  border-radius: 10px;
-  box-shadow: 0 5px 20px var(--color-text-muted);
-  font-family: inherit;
-} */
+  /* color: var(--color-bg-card); */
+  /* border-radius: 10px; */
+  box-shadow: 6px 6px 0 var(--color-box-shadow);
+  /* font-family: inherit; */
+  position: relative;
+}
 
-/* #terminal-window {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 1rem;
+.terminal-header {
+  background: linear-gradient(
+    to right,
+    var(--color-bg-gradient-bottom),
+    var(--color-bg-gradient-right)
+  );
+  padding: 6px 12px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.terminal-title {
+  font-size: 12px;
+  color: var(--color-text-inverse);
+  letter-spacing: 0.5px;
+}
+
+.terminal-form {
+  padding: 20px;
+  background: var(--color-border);
+  color: var(--color-terminal-green);
+  font-family: "Jetbrains Mono", "Source Code Pro", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.terminal-form input[type="text"],
+.terminal-form input[type="tel"],
+.terminal-form input[type="email"],
+.terminal-form textarea {
+  width: 100%;
   background: var(--color-text-main);
-  color: var(--color-bg-card);
-  border-radius: 10px;
-  box-shadow: 0 5px 20px var(--color-text-muted);
+  border: 1px solid var(--color-terminal-green);
+  padding: 6px;
   font-family: inherit;
-} */
+  font-size: 14px;
+}
+
+.terminal-form input:focus,
+.terminal-form textarea:focus {
+  outline: none;
+  background: var(--color-bg-main);
+}
+
+.terminal-form label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.terminal-form fieldset {
+  border: 1px solid var(--color-text-main);
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.terminal-form legend {
+  padding: 0 6px;
+  color: var(--color-terminal-blue);
+}
+
+#submit-button {
+  display: inline-block;
+  width: auto;
+  color: var(--color-terminal-green);
+  margin-top: 16px;
+  padding: 6px 14px;
+  background: var(--color-text-main);
+  border: 1px solid var(--color-terminal-green);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+#submit-button:hover {
+  color: var(--color-text-main);
+  background: var(--color-terminal-blue);
+}
+
+#submit-button:active {
+  background: var(--color-text-main);
+  color: var(--color-terminal-blue);
+}
+
+.terminal-window::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 0, 0.03),
+    rgba(0, 255, 0, 0.03) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  mix-blend-mode: screen;
+}
+
+.terminal-form input::placeholder,
+.terminal-form textarea::placeholder {
+  color: var(--color-terminal-green);
+  opacity: 0.5;
+  font-style: italic;
+}
 
 /* .success-message,
 .error-message {
@@ -328,42 +398,5 @@ h4 {
   color: var(--color-accent);
 } */
 
-.terminal-form {
-  color: black;
-}
 
-#full-name {
-  color: black;
-}
 
-#phone-number {
-  color: black;
-}
-
-#email {
-  color: black;
-}
-
-#comments {
-  color: black;
-}
-
-#phone-contact {
-  color: black;
-}
-
-#email-contact {
-  color: black;
-}
-
-#submit-button {
-  color: black;
-}
-
-/* #contacts {
-  color: black;
-} */
-
-.qr-code {
-  color: black;
-}

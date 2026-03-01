@@ -27,7 +27,7 @@
           </ul>
         </nav>
       </div>
-      <button id="theme-toggle"><h3>Toggle Theme</h3></button>
+      <button id="theme-toggle">Toggle Theme</button>
     </header>
     <main>
       <!-- <section id="hero"></section>
@@ -38,7 +38,7 @@
 
         <div class="sleeves-carousel">
           <button id="prev-sleeve" type="button" aria-label="Previous Sleeve">
-            <h3>◀</h3>
+            ◀
           </button>
           <div class="product-card">
             <img
@@ -56,7 +56,7 @@
             </p>
           </div>
           <button id="next-sleeve" type="button" aria-label="Next Sleeve">
-            <h3>▶</h3>
+            ▶
           </button>
         </div>
       </section>
@@ -65,9 +65,7 @@
         <h2>Magic: the Gathering Mana Value Game</h2>
         <p>
           Higher Mana Value Wins!
-          <button id="flip-card-button" type="button">
-            <h3>Flip Cards</h3>
-          </button>
+          <button id="flip-card-button" type="button">Flip Cards</button>
         </p>
         <div id="card-flip">
           <img
@@ -88,17 +86,17 @@
       <section id="contact-form">
         <h2>Contact Form</h2>
         <div id="terminal-window">
+          <div class="terminal-header">
+            <span class="terminal-title">contact_terminal.app</span>
+          </div>
           <!-- My goal for the form will be to make it look like a computer terminal because I like that aesthetic -->
           <form action="" method="get" class="terminal-form">
             <fieldset>
-              <legend>Please fill out this form!</legend>
               <!--I understand this may be off putting but I like having the legend around my forms. This will get adjusted once I begin styling the form.-->
-              <br />
               <label for="full-name">
                 Name:
                 <input id="full-name" name="fullName" type="text" required />
               </label>
-              <br />
               <label for="phone-number">
                 Phone Number:
                 <input
@@ -108,24 +106,20 @@
                   required
                 />
               </label>
-              <br />
               <label for="email">
                 Email:
                 <input id="email" name="email" type="email" required />
               </label>
-              <br />
-              Please leave me a comment:
-              <br />
               <label for="comments">
+                Please leave me a comment:
                 <textarea
                   id="comments"
                   name="comments"
                   rows="10"
                   cols="40"
-                  placeholder="your opinion matters..."
+                  placeholder="Your opinion matters..."
                 ></textarea>
               </label>
-              <br />
               <fieldset>
                 <legend>Contact Preference</legend>
                 <label for="phone-contact">
@@ -148,15 +142,11 @@
                   />
                 </label>
               </fieldset>
-              <label for="submit-button">
-                <input id="submit-button" type="submit" />
-              </label>
+              <input id="submit-button" type="submit" value="Run Command" />
               <!-- I researched more about innerhtml and I want to display the success or error message of the form in real time when a user submits their information -->
               <div class="error-message"></div>
               <div class="success-message"></div>
             </fieldset>
-            <br />
-            <!-- these breaks are temporary and just in place to organize my form until I begin styling this section-->
           </form>
         </div>
       </section>
