@@ -15,7 +15,7 @@
   <body>
     <header>
       <div id="site-identity">
-        <h1>Ermac</h1>
+        <h1>vENTURA dESIGN cOLLECTIVE</h1>
       </div>
       <div id="nav">
         <nav>
@@ -30,39 +30,94 @@
       <button id="theme-toggle">Toggle Theme</button>
     </header>
     <main>
-      <!-- <section id="hero"></section>
-      <section id="about"></section> -->
-      <section id="sleeves">
-        <!-- In this section, I am going to have a carousel display that will show my favorite trading card gaming sleeves. There will be an image of the product and a button on either side to shuffle through them. -->
-        <h2>Dragon Shield Sleeves</h2>
-
-        <div class="sleeves-carousel">
-          <button id="prev-sleeve" type="button" aria-label="Previous Sleeve">
-            ◀
-          </button>
-          <div class="product-card">
-            <img
-              class="sleeve-image"
-              src="assets/images/dragonshield-sleeves.jpeg"
-              alt="Dragon shield card sleeves"
-            />
-            <h3 id="sleeve-name">
-              <!-- ADD THIS -->
-              <!-- Sleeve name will be inserted dynamically -->
-            </h3>
-            <p id="sleeve-description">
-              <!-- ADD THIS -->
-              <!-- Product description will be inserted dynamically -->
-            </p>
+      <section id="hero">
+        <h2>Thanks for stopping by!</h2>
+        <div class="main-game-window">
+          <div class="application-header">
+            <span class="terminal-title">homepage.app</span>
           </div>
-          <button id="next-sleeve" type="button" aria-label="Next Sleeve">
-            ▶
-          </button>
+          <div class="hero-body">
+            <div class="hero-content">
+              <h3>Premium Trading Card SLeeves</h3>
+              <p>
+                Family owned. Based in the USA. Built by gamers, for gamers.
+              </p>
+              <button>Browse Collection</button>
+            </div>
+            <div class="hero-sidebar">
+              <p><strong>System Specs:</strong></p>
+              <p>Archival safe materials</p>
+              <p>Tournament legal</p>
+              <p>SHipped from California, USA</p>
+            </div>
+            <div class="status-bar">
+              <span>Version 2.3.4(Build 1010) | Last updated: March 2026</span>
+            </div>
+          </div>
         </div>
       </section>
+      <section id="about">
+        <h2>About Us</h2>
+        <div class="main-game-window">
+          <div class="application-header">
+            <span class="terminal-title">about_company.app</span>
+          </div>
+          <div class="about-body">
+            <div class="about-main">
+              <p>Founded in a dusty garage in Southern California...</p>
+              <p>We're a family of tabletop gamers...</p>
+            </div>
+            <aside class="about-sidebar">
+              <h4>Company Info</h4>
+              <p>Established: 2026</p>
+              <p>Location: USA</p>
+              <p>Specialty: TCG Card Sleeves</p>
+            </aside>
+          </div>
+          <div class="status-bar">
+            <span>Now shipping to all 50 states.</span>
+          </div>
+        </div>
+      </section>
+      <section id="sleeves">
+        <h2>Dragon Shield Sleeves</h2>
+        <div class="main-game-window">
+          <div class="application-header">
+            <span class="terminal-title">card_sleeves_marketplace.app</span>
+          </div>
+          <div class="carousel-body">
+            <button id="prev-sleeve" type="button" aria-label="Previous Sleeve">
+              ◀
+            </button>
+            <div class="product-card">
+              <img
+                class="sleeve-image"
+                src="assets/images/dragonshield-sleeves.jpeg"
+                alt="Dragon shield card sleeves"
+              />
+              <h3 id="sleeve-name">
+                <!-- ADD THIS -->
+                <!-- Sleeve name will be inserted dynamically -->
+              </h3>
+              <p id="sleeve-description">
+                <!-- ADD THIS -->
+                <!-- Product description will be inserted dynamically -->
+              </p>
+            </div>
+            <button id="next-sleeve" type="button" aria-label="Next Sleeve">
+              ▶
+            </button>
+          </div>
+          <div class="status-bar">
+            <span id="sleeve-status">Application Ready</span>
+            <!-- implement updates in the JS to keep track of the state of the game -->
+          </div>
+        </div>
+        <!-- In this section, I am going to have a carousel display that will show my favorite trading card gaming sleeves. There will be an image of the product and a button on either side to shuffle through them. -->
+      </section>
       <section id="game">
+        <h2>Guess A Number Game</h2>
         <div id="num-game">
-          <h2>Guess A Number Game</h2>
           <!-- CONTINUE HERE: Complete the styling for the user input. Connect the status bar at bottom to js logic. Add one or two more coins and finish the styling of the coin container; make it more cohesive.-->
           <div class="main-game-window">
             <div class="application-header">
@@ -113,7 +168,7 @@
               </div>
             </div>
             <div class="status-bar">
-              <span>System Ready</span>
+              <span>Application Ready</span>
               <!-- implement updates in the JS to keep track of the state of the game -->
             </div>
           </div>
@@ -191,7 +246,6 @@
       <section id="contacts">
         <h2>Drop Me a Line</h2>
         <div class="footer-icons">
-          <h4>&copy;chri_chin_design_labs 2026</h4>
           <a
             href="https://github.com/ventura-christian"
             target="blank"
@@ -231,8 +285,12 @@
             <h3>Email</h3>
           </a>
         </div>
+        <div class="status-bar">
+          <span>&copy;vENTURA dESIGN cOLLECTIVE 2026 |</span>
+          <span>All trademarks belong to their respective owners.</span>
+          <div class="qr-code"></div>
+        </div>
         <!-- the qr code will link to either this repository, a way for someone to buy me coffee or my github -->
-        <div class="qr-code"></div>
       </section>
     </footer>
   </body>
