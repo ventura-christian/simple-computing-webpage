@@ -64,20 +64,22 @@
     },
   ];
 
+  let currentIndex = 0;
+
   function initProducts() {
-    // console.log("Products module initialized");
     const imageEL = document.querySelector(".sleeve-image");
     const nameEL = document.getElementById("sleeve-name");
     const descEL = document.getElementById("sleeve-description");
 
-    const firstProduct = products[0];
+    renderProduct(currentIndex);
 
-    imageEL.src = firstProduct.image;
-    nameEL.textContent = firstProduct.name;
-    descEL.textContent = firstProduct.description;
+    function renderProduct(index) {
+      const product = products[index];
 
-    // logged here
-    console.log(imageEL, nameEL, descEL);
+      imageEL.src = product.image;
+      nameEL.textContent = product.name;
+      descEL.textContent = product.description;
+    }
   }
 
   window.initProducts = initProducts;
