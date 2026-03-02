@@ -1,3 +1,5 @@
+let currentIndex = 0;
+
 (function () {
   "use strict";
 
@@ -63,8 +65,6 @@
         "100 pack of durable, purple matte colored card sleeves with tournament-grade shuffle feel. ",
     },
   ];
-
-  let currentIndex = 0;
 
   function initProducts() {
     const imageEL = document.querySelector(".sleeve-image");
