@@ -65,8 +65,18 @@
   ];
 
   function initProducts() {
-    console.log("Products module initialized");
-    
+    // console.log("Products module initialized");
+    const imageEL = document.querySelector(".sleeve-image");
+    const nameEL = document.getElementById(".sleeve-name");
+    const descEL = document.getElementById(".sleeve-description");
+
+    const firstProduct = products[0];
+
+    imageEL.src = firstProduct.image;
+    nameEL.textContent = firstProduct.name;
+    descEL.textContent = firstProduct.description;
+
+    console.log(firstProduct());
   }
 
   window.initProducts = initProducts;

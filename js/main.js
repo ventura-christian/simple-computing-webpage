@@ -1,12 +1,20 @@
-(function () {
-  "use strict";
+// (function () {
+//   "use strict";
 
-  function initApp() {
-    initProducts();
-    initGame();
-    initForm();
-    console.log("Application boot complete");
+//   function initApp() {
+//     initProducts();
+//     initGame();
+//     initForm();
+//     console.log("Application boot complete");
+//   }
+
+//   document.addEventListener("DOMContentLoaded", initApp);
+// })();
+
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.initProducts) {
+    window.initProducts();
   }
-
-  document.addEventListener("DOMContentLoaded", initApp);
-})();
+});
