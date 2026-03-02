@@ -3,7 +3,7 @@
 
   const products = [
     {
-      name: "Black Matte Dragon Shield SLeeves",
+      name: "Black Matte Dragon Shield Sleeves",
       image: "assets/images/card-sleeves/black-matte.jpg",
       description:
         "100 pack of durable, matte black colored card sleeves with tournament-grade shuffle feel. ",
@@ -67,8 +67,8 @@
   function initProducts() {
     // console.log("Products module initialized");
     const imageEL = document.querySelector(".sleeve-image");
-    const nameEL = document.getElementById(".sleeve-name");
-    const descEL = document.getElementById(".sleeve-description");
+    const nameEL = document.getElementById("sleeve-name");
+    const descEL = document.getElementById("sleeve-description");
 
     const firstProduct = products[0];
 
@@ -76,7 +76,8 @@
     nameEL.textContent = firstProduct.name;
     descEL.textContent = firstProduct.description;
 
-    console.log(firstProduct());
+    // logged here
+    console.log(imageEL, nameEL, descEL);
   }
 
   window.initProducts = initProducts;
