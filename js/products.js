@@ -1,7 +1,6 @@
-let currentIndex = 0;
-
 (function () {
-  "use strict";
+  let currentIndex = 0;
+  ("use strict");
 
   const products = [
     {
@@ -30,7 +29,7 @@ let currentIndex = 0;
     },
     {
       name: "Emerald Matte Dragon Shield Sleeves",
-      image: "assets/images/card-sleeves/emerald-matte.jpg",
+      image: "assets/images/card-sleeves/emerald-matte.webp",
       description:
         "100 pack of durable, emerald (brilliant green) colored matte colored card sleeves with tournament-grade shuffle feel. ",
     },
@@ -66,6 +65,7 @@ let currentIndex = 0;
     },
   ];
 
+  // targets the elements to display the information of the current product on the webpage
   function initProducts() {
     const imageEL = document.querySelector(".sleeve-image");
     const nameEL = document.getElementById("sleeve-name");
@@ -75,11 +75,27 @@ let currentIndex = 0;
 
     function renderProduct(index) {
       const product = products[index];
-
       imageEL.src = product.image;
       nameEL.textContent = product.name;
       descEL.textContent = product.description;
     }
+
+    const prevBtn = document.getElementById("prev-sleeve");
+    const nextBtn = document.getElementById("next-sleeve");
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + products.length) % products.length;
+      renderProduct(currentIndex);
+      // this log statement keeps track of the index in the console to verify correct product is shown
+      console.log("Current index:", currentIndex, "Product:", products[currentIndex].name);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % products.length;
+      renderProduct(currentIndex);
+      console.log("Current index:", currentIndex, "Product:", products[currentIndex].name);
+    });
+    console.log(products[currentIndex]);
   }
 
   window.initProducts = initProducts;
