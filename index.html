@@ -177,23 +177,17 @@
           <!-- My goal for the form will be to make it look like a computer terminal because I like that aesthetic -->
           <form action="" method="get" class="terminal-form">
             <fieldset>
-              <!--I understand this may be off putting but I like having the legend around my forms. This will get adjusted once I begin styling the form.-->
               <label for="full-name">
                 Name:
-                <input id="full-name" name="fullName" type="text" required />
+                <input id="full-name" name="fullName" type="text" />
               </label>
               <label for="phone-number">
                 Phone Number:
-                <input
-                  id="phone-number"
-                  name="phoneNumber"
-                  type="tel"
-                  required
-                />
+                <input id="phone-number" name="phoneNumber" type="tel" />
               </label>
               <label for="email">
                 Email:
-                <input id="email" name="email" type="email" required />
+                <input id="email" name="email" type="email" />
               </label>
               <label for="comments">
                 Please leave me a comment:
@@ -214,7 +208,6 @@
                     name="contactPreference"
                     type="radio"
                     value="Phone"
-                    checked
                   />
                 </label>
                 <label for="email-contact">

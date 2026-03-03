@@ -417,10 +417,10 @@ button:hover {
   font-size: 14px;
 }
 
-.terminal-form input:focus,
-.terminal-form textarea:focus {
-  outline: none;
-  background: var(--color-bg-main);
+.terminal-form input,
+.terminal-form textarea {
+  color: var(--color-bg-card);
+  caret-color: var(--color-terminal-green);
 }
 
 .terminal-form label {
@@ -461,8 +461,8 @@ button:hover {
 }
 
 #submit-button:active {
-  background: var(--color-text-main);
-  color: var(--color-terminal-blue);
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
 }
 
 .terminal-window::after {
@@ -474,35 +474,32 @@ button:hover {
     to bottom,
     rgba(0, 255, 0, 0.03),
     rgba(0, 255, 0, 0.03) 1px,
-    transparent 2px,
-    transparent 4px
+    transparent 1px,
+    transparent 2px
   );
   mix-blend-mode: screen;
 }
 
 .terminal-form input::placeholder,
 .terminal-form textarea::placeholder {
-  color: var(--color-terminal-green);
-  opacity: 0.5;
+  color: var(--color-terminal-blue);
+  opacity: 0.4;
   font-style: italic;
 }
 
-/* .success-message,
+.success-message,
 .error-message {
   margin-top: 1rem;
   padding: 0.5rem;
-  border-radius: 4px;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  font-family: inherit;
 }
 
 .success-message {
-  background-color: var(--color-text-muted);
+  background-color: var(--color-text-main);
   color: var(--color-bg-card);
 }
 
 .error-message {
-  background-color: var(--color-text-muted);
-  color: var(--color-accent);
-} */
+  background-color: var(--color-text-main);
+  color: var(--color-highlight);
+}
