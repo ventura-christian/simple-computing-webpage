@@ -146,8 +146,8 @@ button:hover {
 }
 
 .sleeve-image {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   object-fit: cover;
   border: 2px solid var(--color-border);
   box-shadow:
@@ -164,13 +164,13 @@ button:hover {
     inset 2px 2px 0 var(--color-box-shadow);
   padding: 20px;
   text-align: center;
-  max-width: 320px;
+  max-height: 400px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
 .product-card h3 {
-  margin-top: 15px;
-  margin-bottom: 8px;
+  margin-top: 5px;
 }
 
 .product-card p {
