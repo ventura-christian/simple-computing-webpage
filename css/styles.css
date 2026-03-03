@@ -17,6 +17,76 @@
   --color-terminal-blue: #2cd8ff;
 }
 
+body.dark-mode {
+  --color-bg-main: #1c1c1c;
+  --color-bg-section: #2a2a2a;
+  --color-bg-card: #333333;
+  --color-text-main: #f2f2f2;
+  --color-text-muted: #bbbbbb;
+  --color-text-inverse: #ffffff;
+  --color-border: #888888;
+  --color-box-shadow: #000000;
+  --color-primary: #4c6ef5;
+  --color-accent: #ff4d4d;
+  --color-highlight: #ffd43b;
+  --color-bg-gradient-bottom: #1f3c66;
+  --color-bg-gradient-right: #355f9c;
+  --color-terminal-green: #33ff33;
+  --color-terminal-blue: #2cd8ff;
+}
+
+body.dark-mode #terminal-window {
+  background-color: #000000;
+  border: 2px solid #aaaaaa;
+  box-shadow: 0 0 12px rgba(51, 255, 51, 0.2);
+}
+
+body.dark-mode #terminal-window,
+body.dark-mode .terminal-form,
+body.dark-mode .terminal-form input,
+body.dark-mode .terminal-form textarea,
+body.dark-mode .terminal-form label,
+body.dark-mode .terminal-form legend {
+  background: var(--color-bg-card);
+  color: var(--color-terminal-green);
+  font-family: inherit, monospace;
+}
+
+body.dark-mode .terminal-form input,
+body.dark-mode .terminal-form textarea {
+  border: 1px solid var(--color-text-main);
+  outline: none;
+}
+
+body.dark-mode .terminal-form input:focus,
+body.dark-mode .terminal-form textarea:focus {
+  box-shadow: 0 0 6px rgba(51, 255, 51, 0.6);
+}
+
+body.dark-mode #submit-button {
+  background-color: var(--color-bg-card);
+  color: var(--color-terminal-green);
+  border: 1px solid var(--color-terminal-green);
+  cursor: pointer;
+}
+
+body.dark-mode #submit-button:hover {
+  background-color: var(--color-terminal-blue);
+  color: var(--color-bg-card);
+}
+
+body.dark-mode .error-message {
+  background: var(--color-bg-card);
+  color: var(--color-accent);
+}
+
+body.dark-mode .success-message {
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+}
+
+/* LEFT OFF - add breakpoints and fix the layouts for the homepage and about sections */
+
 /* ==== Global Reset ==== */
 * {
   box-sizing: border-box;
@@ -33,6 +103,9 @@ body {
   );
   color: var(--color-text-main);
   min-height: 100vh;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 section {
@@ -380,6 +453,9 @@ button:hover {
 }
 
 .application-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: linear-gradient(
     to right,
     var(--color-bg-gradient-bottom),
@@ -502,4 +578,17 @@ button:hover {
 .error-message {
   background-color: var(--color-text-main);
   color: var(--color-highlight);
+}
+
+.window-control {
+  font-size: 11px;
+  pad: 2px 8px;
+  margin-left: auto;
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.window-control:active {
+  transform: translateY(1px);
 }

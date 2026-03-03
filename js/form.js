@@ -39,17 +39,17 @@
       let isValid = true;
 
       if (!fullName) {
-        showError(errorContainer, "Name is required.");
+        showError(errorContainer, "Error: Name is required.");
         isValid = false;
       }
 
       if (!comments) {
-        showError(errorContainer, "Comments are required.");
+        showError(errorContainer, "Error: Comments are required.");
         isValid = false;
       }
 
       if (!contactPreference) {
-        showError(errorContainer, "Please select a contact preference.");
+        showError(errorContainer, "Error: Please select a contact preference.");
         isValid = false;
       }
 
@@ -58,14 +58,17 @@
 
       if (contactPreference === "Phone") {
         if (!phoneRegex.test(phone)) {
-          showError(errorContainer, "Enter a valid 10 digit phone number.");
+          showError(
+            errorContainer,
+            "Error: Enter a valid 10 digit phone number.",
+          );
           isValid = false;
         }
       }
 
       if (contactPreference === "Email") {
         if (!emailRegex.test(email)) {
-          showError(errorContainer, "Enter a valid email address.");
+          showError(errorContainer, "Error: Enter a valid email address.");
           isValid = false;
         }
       }

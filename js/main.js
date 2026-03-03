@@ -11,3 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
     window.initForm();
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.initTheme) {
+    window.initTheme();
+  }
+});
