@@ -17,17 +17,23 @@
     <title>SleeveSanctum</title>
   </head>
   <body>
-    <header>
-      <div id="site-identity">
-        <h1>SleeveSanctum</h1>
-      </div>
-      <div id="nav">
-        <nav>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <img
+            src="assets/images/logo/demon.png"
+            alt="SleeveSanctum logo"
+            class="brand-logo"
+          />
+          <h1>SleeveSanctum</h1>
+        </div>
+
+        <nav class="main-nav">
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#sleeves">Card Sleeves</a></li>
-            <li><a href="#game">Flip Game</a></li>
-            <li><a href="#contact-form">Contact</a></li>
+            <li><a href="#about" class="nav-button">About</a></li>
+            <li><a href="#sleeves" class="nav-button">Card Sleeves</a></li>
+            <li><a href="#game" class="nav-button">Flip Game</a></li>
+            <li><a href="#contact-form" class="nav-button">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -55,7 +61,7 @@
 
               <div class="hero-logo">
                 <img
-                  src="assets/images/logo/eagle.jpg"
+                  src="assets/images/logo/demon-2.png"
                   alt="Company partner logo"
                   class="pixel-image"
                 />
@@ -112,7 +118,10 @@
                 <p>Established: 1991</p>
                 <p>Location: Los Angeles, CA</p>
                 <p>Specialty: TCG Protection</p>
-                <p>Mission: Preserve your trading cards while providing the highest quality products</p>
+                <p>
+                  Mission: Preserve your trading cards while providing the
+                  highest quality products
+                </p>
               </div>
             </div>
           </div>
@@ -161,33 +170,33 @@
               <div class="game-panel">
                 <div class="game-description">
                   <h3>Instructions:</h3>
-                  <p>Enter a number between 1 & 10.</p>
-                  <p>Computer will choose a random number.</p>
-                  <p>If your number matches, you win.</p>
-                  <p>If not, you lose.</p>
+                  <ul>
+                    <li>Enter a number between 1 & 10.</li>
+                    <li>Computer will choose a random number.</li>
+                    <li>If your number matches, you win.</li>
+                    <li>If not, you lose.</li>
+                  </ul>
                 </div>
                 <div class="user-input">
                   <form>
-                    <label for="user-number">
-                      Choose your number
+                    <h3>Choose your number</h3>
+                    <div class="input-row">
                       <input id="user-number" type="number" />
-                    </label>
-                    <label for="user-submit">
                       <input id="user-submit" type="submit" value="SUBMIT" />
-                    </label>
+                    </div>
                   </form>
                 </div>
               </div>
               <div class="game-history">
                 <p>Match History</p>
                 <ul></ul>
+                <div class="pixel-mascot">
+                  <img src="assets/images/coin/coin.gif" alt="gold coin" />
+                </div>
               </div>
             </div>
             <div class="status-bar">
               <span>Wanna play a game???</span>
-            </div>
-            <div class="pixel-mascot">
-              <img src="assets/images/coin/coin.gif" alt="gold coin" />
             </div>
           </div>
         </div>
