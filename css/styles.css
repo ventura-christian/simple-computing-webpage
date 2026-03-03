@@ -213,20 +213,30 @@ button:hover {
 }
 
 .game-body {
-  display: grid;
+  display: flex;
+  padding: 16px;
   border-top: 2px solid var(--color-text-main);
   grid-template-columns: 2fr 1fr;
-  gap: 0;
+  gap: 10;
   background: var(--color-bg-main);
 }
 
+.game-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .game-history {
-  background: var(--color-bg-card);
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  background: var(--color-terminal-blue);
   border-left: 2px solid var(--color-border);
   box-shadow:
     inset -2px -2px 0 var(--color-text-inverse),
     inset 2px 2px 0 var(--color-box-shadow);
-  display: flex;
   flex-direction: column;
 }
 
@@ -244,7 +254,6 @@ button:hover {
   background: var(--color-text-main);
   padding: 6px 12px;
   color: var(--color-bg-section);
-  border: 2px solid var(--color-border);
   box-shadow:
     inset -2px -2px 0 var(--color-text-inverse),
     inset 2px 2px 0 var(--color-box-shadow);
@@ -252,13 +261,6 @@ button:hover {
 
 .game-panel {
   padding: 16px;
-}
-
-.status-bar {
-  padding: 3px 10px;
-  background: var(--color-bg-section);
-  border-top: 2px solid var(--color-border);
-  font-size: 14px;
 }
 
 .pixel-mascot {
@@ -272,6 +274,30 @@ button:hover {
   image-rendering: pixelated;
   width: 100px;
   height: 100px;
+}
+
+.pixel-mascot.win-glow img {
+  animation: coin-spin 1s ease-in-out 2;
+  opacity: 1;
+}
+
+@keyframes coin-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.status-bar {
+  padding: 3px 10px;
+  background: var(--color-bg-section);
+  border-top: 2px solid var(--color-border);
+  font-size: 14px;
 }
 
 .user-input fieldset {
