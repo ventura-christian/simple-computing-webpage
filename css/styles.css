@@ -85,8 +85,6 @@ body.dark-mode .success-message {
   color: var(--color-text-main);
 }
 
-/* LEFT OFF - add breakpoints and fix the layouts for the homepage and about sections */
-
 /* ==== Global Reset ==== */
 * {
   box-sizing: border-box;
@@ -103,6 +101,8 @@ body {
   );
   color: var(--color-text-main);
   min-height: 100vh;
+  width: 1280px;
+  margin: 0 auto;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;

@@ -4,6 +4,9 @@ const gameHistory = document.querySelector("#num-game .game-history ul");
 const gameStatusBar = document.querySelector("#num-game .status-bar span");
 const coinMascot = document.querySelector("#num-game .pixel-mascot");
 
+let history = [];
+const MAX_HISTORY = 5;
+
 let targetNumber = generateRandomNumber();
 let attempts = 0;
 
