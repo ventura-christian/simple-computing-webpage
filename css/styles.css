@@ -510,16 +510,16 @@ section h2 {
   background: var(--color-bg-card);
 }
 
-.submit-button {
+#submit-button {
   background: var(--color-text-main);
   border: 1px solid var(--color-terminal-green);
   color: var(--color-terminal-green);
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  font-size: 14px;
-  margin-top: 16px;
-  padding: 6px 14px;
+  font-size: 20px;
+  margin: 12px auto;
+  padding: 2px 10px;
   transition:
     background 0.15s ease,
     color 0.15s ease;
