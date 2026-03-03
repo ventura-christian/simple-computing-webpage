@@ -358,6 +358,55 @@ button:hover {
   font-family: inherit;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+  background: var(--color-bg-main);
+}
+
+.hero-left {
+  grid-column: 1 / 2;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hero-logo {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-border);
+  background: var(--color-bg-card);
+  box-shadow:
+    inset -2px -2px 0 var(--color-text-inverse),
+    inset 2px 2px 0 var(--color-box-shadow);
+  padding: 15px;
+}
+
+.hero-specs {
+  grid-column: 1 / 2;
+  border: 2px solid var(--color-border);
+  background: var(--color-bg-card);
+  padding: 15px;
+  font-size: 14px;
+}
+
+.hero-specs ul {
+  list-style: square;
+  padding-left: 18px;
+}
+
+.pixel-image {
+  image-rendering: pixelated;
+  max-width: 180px;
+  height: auto;
+}
+
 .macos9-icon {
   display: inline-flex;
   align-items: center;
@@ -480,6 +529,38 @@ button:hover {
 .terminal-form legend {
   padding: 0 6px;
   color: var(--color-terminal-blue);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background: var(--color-bg-main);
+}
+
+.about-text {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.about-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-border);
+  background: var(--color-bg-card);
+  padding: 15px;
+  box-shadow:
+    inset -2px -2px 0 var(--color-text-inverse),
+    inset 2px 2px 0 var(--color-box-shadow);
+}
+
+.about-sidebar {
+  grid-column: 1 / 3;
+  border-top: 2px solid var(--color-border);
+  padding-top: 15px;
+  font-size: 14px;
 }
 
 #submit-button {
