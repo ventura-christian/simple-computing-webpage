@@ -22,7 +22,7 @@ function playGame(userNumber) {
 }
 
 function handleWin(userNumber) {
-  gameStatusBar.textContent = `You got it!! The CPU selected ${targetNumber}. Starting new game...`;
+  gameStatusBar.textContent = `You got it, ${targetNumber} was the correct number!!    Starting new game...`;
 
   targetNumber = generateRandomNumber();
   attempts = 0;
@@ -38,9 +38,10 @@ userSubmit.addEventListener("click", function (e) {
   const userNum = parseInt(userNumberInput.value, 10);
 
   if (isNaN(userNum) || userNum < 1 || userNum > 10) {
-    gameStatusBar.textContent = "Enter a number between 1 and 10.";
+    gameStatusBar.textContent = "Invalid input, enter a number between 1 and 10.";
+    userNumberInput.value = "";
     return;
-  }
+  } 
 
   playGame(userNum);
   userNumberInput.value = "";
