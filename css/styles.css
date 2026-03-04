@@ -87,6 +87,8 @@ body.dark-mode #submit-button:hover {
 /* ==== Global Reset ==== */
 
 * {
+  /* the outline can be used to see how each individual element sits in their respective containers */
+  /* outline: 1px solid red; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -96,8 +98,15 @@ body.dark-mode #submit-button:hover {
   background: var(--color-bg-main);
   display: grid;
   gap: 20px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   padding: 20px;
+}
+
+.about-grid,
+.hero-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
 }
 
 .about-photo {
@@ -110,6 +119,7 @@ body.dark-mode #submit-button:hover {
   display: flex;
   justify-content: center;
   padding: 15px;
+  max-width: 100%;
 }
 
 .about-sidebar {
@@ -278,7 +288,7 @@ button:hover {
   background: var(--color-bg-main);
   display: grid;
   gap: 20px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   grid-template-rows: auto auto;
   padding: 20px;
 }
@@ -302,6 +312,7 @@ button:hover {
   height: fit-content;
   justify-content: center;
   padding: 15px;
+  max-width: 100%;
 }
 
 .hero-specs {
@@ -310,6 +321,7 @@ button:hover {
   font-size: 14px;
   grid-column: 1 / 2;
   padding: 15px;
+  max-width: 100%;
 }
 
 .hero-specs ul {
@@ -408,7 +420,7 @@ button:hover {
 .pixel-image {
   height: auto;
   image-rendering: pixelated;
-  max-width: 180px;
+  max-width: 100%;
 }
 
 .pixel-mascot {
@@ -434,7 +446,7 @@ button:hover {
     inset 2px 2px 0 var(--color-box-shadow);
   margin: 0 auto;
   max-height: 600px;
-  max-width: 500px;
+  max-width: 100%;
   padding: 20px;
   text-align: center;
 }
@@ -454,10 +466,6 @@ button:hover {
   line-height: 1.4;
 }
 
-.section {
-  padding: 0;
-}
-
 section {
   background-color: var(--color-bg-main);
   border: 2px solid var(--color-text-main);
@@ -467,7 +475,8 @@ section {
   margin: 40px auto;
   max-width: 1100px;
   padding: 0;
-  width: 85%;
+  width: 1200px;
+  box-sizing: border-box;
 }
 
 section > *:not(h2) {
@@ -484,8 +493,9 @@ section h2 {
 }
 
 .sleeve-image {
-  height: 400px;
-  width: 350px;
+  height: auto;
+  max-width: 350px;
+  width: 100%;
 }
 
 #prev-sleeve,
