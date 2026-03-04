@@ -30,27 +30,33 @@ The website is built with HTML, CSS, and JavaScript, featuring:
 
 ## Project Structure
 
-Root
-    - assets
-      - fonts
-      - icons
-      - images
-    - css
-      - styles.css
-    - data
-      - products.json
-    - js
-      - form.js
-      - game.js
-      - main.js
-      - products.js
-      - theme.js
-    - js-obfuscated
-      - form.js
-      - game.js
-      - main.js
-      - products.js
-      - theme.js
-    - .gitignore
-    - index.html
-    - README.md
+Root/
+│
+├── assets/
+│   ├── fonts/
+│   ├── icons/
+│   └── images/
+│
+├── css/
+│   └── styles.css
+│
+├── data/
+│   └── products.json
+│
+├── js/
+│   ├── form.js
+│   ├── game.js
+│   ├── main.js
+│   ├── products.js
+│   └── theme.js
+│
+├── js-obfuscated/
+│   ├── form.js
+│   ├── game.js
+│   ├── main.js
+│   ├── products.js
+│   └── theme.js
+│
+├── .gitignore
+├── index.html
+└── README.md
