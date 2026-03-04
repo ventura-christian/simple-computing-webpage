@@ -29,3 +29,28 @@ The website is built with HTML, CSS, and JavaScript, featuring:
 - JavaScript (ES6) – Theme toggle, carousel logic, number guessing game, form validation  
 
 ## Project Structure
+
+Root
+    - assets
+      - fonts
+      - icons
+      - images
+    - css
+      - styles.css
+    - data
+      - products.json
+    - js
+      - form.js
+      - game.js
+      - main.js
+      - products.js
+      - theme.js
+    - js-obfuscated
+      - form.js
+      - game.js
+      - main.js
+      - products.js
+      - theme.js
+    - .gitignore
+    - index.html
+    - README.md
