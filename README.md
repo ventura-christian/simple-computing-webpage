@@ -31,6 +31,7 @@ The website is built with HTML, CSS, and JavaScript, featuring:
 ## Project Structure
 
 Root/
+
 1. assets/
    - fonts/
    - icons/
