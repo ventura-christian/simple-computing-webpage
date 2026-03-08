@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Christian Ventura" />
+    <meta
+      name="description"
+      content="Purpose: For use in GIT417 as the final project. Tech used: HTML, CSS, JS."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js-obfuscated/theme.js" defer></script>
+    <script src="js-obfuscated/products.js" defer></script>
+    <script src="js-obfuscated/game.js" defer></script>
+    <script src="js-obfuscated/form.js" defer></script>
+    <script src="js-obfuscated/main.js" defer></script>
+    <title>SleeveSanctum</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <img
+            src="assets/images/logo/demon.png"
+            alt="SleeveSanctum logo"
+            class="brand-logo"
+          />
+          <h1>SleeveSanctum</h1>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#about" class="nav-button">About Us</a></li>
+            <li><a href="#sleeves" class="nav-button">Card Sleeves</a></li>
+            <li><a href="#game" class="nav-button">Guessing Game</a></li>
+            <li><a href="#contact-form" class="nav-button">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="hero">
+        <h2>Thanks For Stopping By!</h2>
+        <div class="main-game-window">
+          <div class="application-header">
+            <span class="terminal-title">homepage.app</span>
+            <button id="theme-toggle" class="window-control">
+              Dark/Light Appearance
+            </button>
+          </div>
+          <div class="hero-body">
+            <div class="hero-grid">
+              <div class="hero-left">
+                <h3>Premium Trading Card Sleeves</h3>
+                <p>
+                  Built by competitive players. Engineered for protection.
+                  Designed for tournament endurance.
+                </p>
+                <p>Family owned. Based in California. Shipping nationwide.</p>
+              </div>
+
+              <div class="hero-logo">
+                <img
+                  src="assets/images/logo/demon-2.png"
+                  alt="Company partner logo"
+                  class="pixel-image"
+                />
+              </div>
+
+              <div class="hero-specs">
+                <h4>System Specs</h4>
+                <ul>
+                  <li>Archival-safe polypropylene</li>
+                  <li>Acid free & PVC free</li>
+                  <li>Tournament legal</li>
+                  <li>Matte & Gloss finishes</li>
+                </ul>
+              </div>
+            </div>
+            <div class="status-bar">
+              <!-- this is a subtle nod to my birthday and assignment due date -->
+              <span>Version 10.10.91 | Last updated: March 3, 2026</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <h2>About Us</h2>
+        <div class="main-game-window">
+          <div class="application-header">
+            <span class="terminal-title">about_company.app</span>
+          </div>
+          <div class="about-body">
+            <div class="about-grid">
+              <div class="about-text">
+                <h3>Our Story</h3>
+                <p>
+                  Founded in Los Angeles CA, SleeveSanctum was built by
+                  tournament grinders who were tired of low-quality sleeves and
+                  oppressive distributors.
+                </p>
+                <p>
+                  We test every batch in real competitive environments before
+                  they ship. If it can't survive Friday Night Magic, it doesn't
+                  deserve to protect your cards.
+                </p>
+              </div>
+
+              <div class="about-photo">
+                <!-- kudos if you know who these guys are...they're my "staff" -->
+                <img
+                  src="assets/images/employee-photo/staff.jpg"
+                  alt="SleeveSanctum team photo"
+                  class="pixel-image"
+                />
+              </div>
+
+              <div class="about-sidebar">
+                <h4>Company Info</h4>
+                <p>Established: 1991</p>
+                <p>Location: Los Angeles, CA</p>
+                <p>Specialty: TCG Protection</p>
+                <p>
+                  Mission: Preserve your trading cards while providing the
+                  highest quality products
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="status-bar">
+            <span>Now shipping to all 50 states.</span>
+          </div>
+        </div>
+      </section>
+      <section id="sleeves">
+        <!-- In this section, the carousel displays several offerings for my favorite trading card gaming sleeves. There will be an image of the product, the name of the product, and a short description. You can browse the selection via the two buttons on either side of the window. -->
+        <h2>Check Out Our Offerings</h2>
+        <div class="main-game-window">
+          <div class="application-header">
+            <span class="terminal-title">card_sleeves_marketplace.app</span>
+          </div>
+          <div class="carousel-body">
+            <button id="prev-sleeve" type="button" aria-label="Previous Sleeve">
+              ◀
+            </button>
+            <div class="product-card">
+              <img
+                class="sleeve-image"
+                alt="Image of a dragon and the name of the card sleeve"
+              />
+              <h3 id="sleeve-name"></h3>
+              <p id="sleeve-description"></p>
+            </div>
+            <button id="next-sleeve" type="button" aria-label="Next Sleeve">
+              ▶
+            </button>
+          </div>
+          <div class="status-bar">
+            <!-- this will dynamically update to show the current price of the visible card sleeves -->
+            <span id="sleeve-status">Market Price:</span>
+            <span id="sleeve-price"></span>
+          </div>
+        </div>
+      </section>
+      <section id="game">
+        <h2>Number Guessing Game</h2>
+        <div id="num-game">
+          <div class="main-game-window">
+            <div class="application-header">
+              <span class="terminal-title">guessing_game.app</span>
+            </div>
+            <div class="game-body">
+              <div class="game-panel">
+                <div class="game-description">
+                  <h3>Instructions:</h3>
+                  <ul>
+                    <li>Enter a number between 1 & 10.</li>
+                    <li>Computer will choose a random number.</li>
+                    <li>If your number matches, you win.</li>
+                    <li>If not, you lose.</li>
+                  </ul>
+                </div>
+                <div class="user-input">
+                  <form>
+                    <h3>Choose your number</h3>
+                    <div class="input-row">
+                      <input id="user-number" type="number" />
+                      <input id="user-submit" type="submit" value="SUBMIT" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="game-history">
+                <p>Match History</p>
+                <ul></ul>
+                <div class="pixel-mascot">
+                  <img src="assets/images/coin/coin.gif" alt="gold coin" />
+                </div>
+              </div>
+            </div>
+            <div class="status-bar">
+              <!-- I like this line...if you know, you know hehe -->
+              <!-- this will dynamically show the status of the game and if you win or lose -->
+              <!-- when you win, there is a random surprise!! -->
+              <span>Wanna play a game???</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact-form">
+        <h2>Contact Us</h2>
+        <div id="terminal-window">
+          <div class="application-header">
+            <span class="terminal-title">contact_terminal.app</span>
+          </div>
+          <!-- My goal for the form will be to make it look like a computer terminal because I like that aesthetic -->
+          <form action="" method="get" class="terminal-form">
+            <fieldset>
+              <label for="full-name">
+                Name:
+                <input id="full-name" name="fullName" type="text" />
+              </label>
+              <label for="phone-number">
+                Phone Number:
+                <input id="phone-number" name="phoneNumber" type="tel" />
+              </label>
+              <label for="email">
+                Email:
+                <input id="email" name="email" type="email" />
+              </label>
+              <label for="comments">
+                Please leave me a comment:
+                <textarea
+                  id="comments"
+                  name="comments"
+                  rows="10"
+                  cols="40"
+                  placeholder="Your opinion matters..."
+                ></textarea>
+              </label>
+              <fieldset>
+                <legend>Contact Preference</legend>
+                <label for="phone-contact">
+                  Phone
+                  <input
+                    id="phone-contact"
+                    name="contactPreference"
+                    type="radio"
+                    value="Phone"
+                  />
+                </label>
+                <label for="email-contact">
+                  Email
+                  <input
+                    id="email-contact"
+                    name="contactPreference"
+                    type="radio"
+                    value="Email"
+                  />
+                </label>
+              </fieldset>
+              <input id="submit-button" type="submit" value="Run Command" />
+              <!-- I researched more about innerhtml and I want to display the success or error message of the form in real time when a user submits their information -->
+              <div class="error-message"></div>
+              <div class="success-message"></div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section id="contacts">
+        <h2>Drop Me a Line</h2>
+        <div class="footer-icons">
+          <!-- I wanted these to feel retro and pixelated -->
+          <!-- stop by my linkedIn and send me a message!! -->
+          <a
+            href="https://github.com/ventura-christian"
+            target="blank"
+            class="macos9-icon"
+            title="GitHub"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.034c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.746.082-.73.082-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.775.42-1.305.763-1.605-2.665-.3-5.466-1.335-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.805 5.625-5.475 5.922.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.373-12-12-12z"
+              />
+            </svg>
+            <h3>GitHub</h3>
+          </a>
+          <a
+            href="https://linkedin.com/in/ventura-christian"
+            target="_blank"
+            class="macos9-icon"
+            title="LinkedIn"
+          >
+            <svg viewBox="0 0 25 25">
+              <path
+                d="M4 3C4 4.1 3.1 5 2 5S0 4.1 0 3s.9-2 2-2 2 .9 2 2zM0 7h4v17H0V7zm7 0h4v2h.1c.6-1 2-2 3.9-2 4.2 0 5 2.8 5 6.3V24h-4v-9c0-2.2-.04-5-3-5-3.1 0-3.9 2.2-3.9 4.9V24H7V7z"
+              />
+            </svg>
+            <h3>LinkedIn</h3>
+          </a>
+          <a
+            href="mailto:cventura64@outlook.com?subject=Website Inquiry"
+            class="macos9-icon"
+            title="Email"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M0 4c0-.55.45-1 1-1h22c.55 0 1 .45 1 1v16c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V4zm2 2v12h20V6H2zm10 7L2 6h20l-10 7z"
+              />
+            </svg>
+            <h3>Email</h3>
+          </a>
+        </div>
+        <div class="status-bar">
+          <span>&copy; SleeveSanctum 2026 |</span>
+          <span>All trademarks belong to their respective owners.</span>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
